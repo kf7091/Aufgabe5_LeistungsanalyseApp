@@ -1,18 +1,18 @@
-# Bitte lies mich!
 
-## Installationsanleitung
 
-- lade dir den Ordner herunter unter öffne den Ordner in VS Code
-- Öffne ein Terminal
-- Erstelle eine neue Python-Umgebung
+## Installation
+
+- Ordner herunterunterladen und Ordner in VS Code öffnen
+- Terminal öffnen
+- Python-Umgebung erstellen
     - `python -m venv .venv`
-- Aktiviere die Umgebung
+- Aktivieren der Umgebung
     - Windows: `.venv\Scripts\Activate`
     - Linux: `source .venv/bin/activate`
-- Installiere die Pakete
-    - Entweder mit `pip install <paketname>`
+- Installieren der Pakete
+    - mit `pip install <paketname>`
     - Oder mit `pip install -r requirement.txt`
     
 ## Benutzung
 
-- Starte das Programm mit `python main.py`
+- Das Programm mit `python main.py` starten
