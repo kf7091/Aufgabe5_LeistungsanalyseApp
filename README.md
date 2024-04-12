@@ -11,4 +11,5 @@
     - Linux: `source <Ordner für Umgebung>/bin/activate`
 - Das Programm mit `python main.py` starten
 - Daten eingeben
-- Daten werden als *sample.json* abgespeichert
+- Daten werden als *data.json* abgespeichert
+    - Ist schon eine *data.json* vorhanden wird diese überschrieben
