@@ -2,7 +2,7 @@
 
 ## Installation
 
-- Ordner herunterunterladen und Ordner in VS Code öffnen
+- Ordner herunterladen und Ordner in VS Code öffnen
 - Terminal öffnen
 - Python-Umgebung erstellen
     - `python -m venv .venv`
