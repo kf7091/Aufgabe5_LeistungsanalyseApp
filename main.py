@@ -25,3 +25,4 @@ experiment = mf.build_experiment(
 # Convert and write JSON object to file
 with open("data.json", "w") as outfile: 
     json.dump(experiment, outfile)
+    print("JSON-Datei mit folgenden Inhalt wurde erstellt:\n", experiment)
