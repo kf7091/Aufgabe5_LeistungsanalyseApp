@@ -1,18 +1,14 @@
-
-
 ## Installation
-
 - Ordner herunterladen und Ordner in VS Code öffnen
-- Terminal öffnen
+- Terminal öffnen im Ordner
 - Python-Umgebung erstellen
-    - `python -m venv .venv`
-- Aktivieren der Umgebung
-    - Windows: `.venv\Scripts\Activate`
-    - Linux: `source .venv/bin/activate`
-- Installieren der Pakete
-    - mit `pip install <paketname>`
-    - Oder mit `pip install -r requirement.txt`
-    
-## Benutzung
+    - Windows: `python -m venv <Ordner für Umgebung>`
+    - Linux:  `python3 -m venv <Ordner für Umgebung>`
 
+## Benutzung
+- Aktivieren der Umgebung
+    - Windows: `<Ordner für Umgebung>\Scripts\Activate`
+    - Linux: `source <Ordner für Umgebung>/bin/activate`
 - Das Programm mit `python main.py` starten
+- Daten eingeben
+- Daten werden als *sample.json* abgespeichert
