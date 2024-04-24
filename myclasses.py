@@ -21,9 +21,11 @@ class Person():
             json.dump(self.__dict__, outfile)
             print(f"JSON-Datei mit folgenden Inhalt wurde wurde in {os.sep.join(["output", subfolder])} erstellt:\n", self.__dict__)
 
+
 class Supervisor(Person):
     def __init__(self, first_name : str, last_name : str):
         super().__init__(first_name, last_name)
+
 
 class Subject(Person):
     def __init__(self, first_name : str, last_name : str, sex : str, date_of_birth : datetime):
@@ -48,7 +50,7 @@ class Subject(Person):
     
     def get_age(self) -> int:
         # idea from https://miguendes.me/how-to-use-datetimetimedelta-in-python-with-examples#heading-how-to-convert-a-timedelta-to-years
-        
+
         age_delta = datetime.now() - datetime.strptime(self.__date_of_birth, '%Y.%m.%d')
         return int(age_delta.days / 365.25)
                  

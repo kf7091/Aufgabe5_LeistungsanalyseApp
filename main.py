@@ -8,11 +8,13 @@ subject = mc.Subject(
     input("Geben sie das Geschlecht 'male' oder 'female' an:"),
     datetime.strptime(input("Geben Sie das Geburtsdatum des Probanden ein:"), '%d.%m.%Y')
    )
+
 #create supervisor
 supervisor = mc.Supervisor(
     input("Geben Sie den Vornamen des Supervisors ein:"),
     input("Geben Sie den Nachnamen des Supervisors ein:"),
 )
+
 #create experiment            
 experiment = mc.Experiment(
     input("Geben Sie den Experimentnamen ein:"),

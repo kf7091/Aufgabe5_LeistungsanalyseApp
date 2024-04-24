@@ -11,5 +11,6 @@
     - Linux: `source <Ordner für Umgebung>/bin/activate`
 - Das Programm mit `python main.py` starten
 - Daten eingeben
+    - Bei Datumsabfrage das Datum unbedingt im Format *TT.MM.JJJJ* eingeben
 - Daten des Experiments werden als *{Datum}_{Experimentname}.json* im Ordner *output/experiments* abgespeichert
     - Ist schon eine *{Datum}_{Experimentname}.json* vorhanden wird diese überschrieben
