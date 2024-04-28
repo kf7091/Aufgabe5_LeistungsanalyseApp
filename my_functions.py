@@ -1,3 +1,5 @@
+import datetime
+
 def estimate_max_hr(age_years : int , sex : str) -> int:
   """
   See https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4124545/ for different formulas
@@ -27,3 +29,10 @@ def build_experiment(experiment_name, date, supervisor, subject) -> dict:
             "subject" :   subject
             }
     return dict
+
+def calculate_age(birthdate):
+    today = datetime.date.today()
+    age = today.year - birthdate.year
+    if today.month < birthdate.month or (today.month == birthdate.month and today.day < birthdate.day):
+        age -= 1
+    return int(age)

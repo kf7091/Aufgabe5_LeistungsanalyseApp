@@ -1,22 +1,21 @@
 import json
-import my_functions as mf
+import my_classes as mc
 
 #Erstellung des Probanden
-subject = mf.build_person(
+subject = mc.Subject(
     first_name=input("Geben Sie den Vornamen des Probande:in ein:"),
     last_name=input("Geben Sie den Nachnamen des Probande:in ein:"),
-    sex=input("Geben sie das Geschlecht 'male' oder 'female'  an:"),
-    age=int(input("Geben Sie das Alter des Probande:in ein:"))
+    birthdate=int(input("Geben Sie das Alter des Probande:in ein:"),
+    sex=input("Geben sie das Geschlecht 'male' oder 'female'  an:"),)
    )
 #Erstellung des Supervisors
-supervisor = mf.build_person(
+supervisor = mc.Supervisor(
     input("Geben Sie den Vornamen des Supervisors ein:"),
     input("Geben Sie den Nachnamen des Supervisors ein:"),
-    input("Geben sie das Geschlecht des Supervisors 'male' oder 'female' an:"),
-    int(input("Geben Sie das Alter des Supervisors ein:"))
 )
+
 #Input für Datum und Experimentname             
-experiment = mf.build_experiment(
+experiment = mc.Experiment(
     name=input("Geben Sie den Experimentnamen ein:"),
     date=input("Geben Sie das Datum ein:"),
     supervisor=supervisor.__dict__,
