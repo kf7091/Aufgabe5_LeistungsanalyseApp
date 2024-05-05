@@ -6,6 +6,7 @@
     - Linux:  `python3 -m venv <Ordner für Umgebung>`
 
 ## Benutzung
+- [REST-API](https://github.com/jhumci/8_1_REST-API) starten
 - Aktivieren der Umgebung
     - Windows: `<Ordner für Umgebung>\Scripts\Activate`
     - Linux: `source <Ordner für Umgebung>/bin/activate`

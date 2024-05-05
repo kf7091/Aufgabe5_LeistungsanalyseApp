@@ -1,4 +1,5 @@
 import json
+import requests
 import os
 from datetime import datetime
 
@@ -21,6 +22,13 @@ class Person():
             json.dump(self.__dict__, outfile)
             print(f"JSON-Datei mit folgenden Inhalt wurde wurde in {os.sep.join(["output", subfolder])} erstellt:\n", self.__dict__)
 
+    def put(self, server_ip: str, port: int):
+
+        url = f"http://{server_ip}:{port}/person/"
+
+        data_json = json.dumps(self.__dict__)
+        requests.post(url, data_json)
+
 
 class Supervisor(Person):
     def __init__(self, first_name : str, last_name : str):
@@ -28,11 +36,12 @@ class Supervisor(Person):
 
 
 class Subject(Person):
-    def __init__(self, first_name : str, last_name : str, sex : str, date_of_birth : datetime):
+    def __init__(self, first_name : str, last_name : str, sex : str, date_of_birth : datetime, email : str):
         super().__init__(first_name, last_name)
         self.sex : str = sex
         self.__date_of_birth : str = date_of_birth.strftime("%Y.%m.%d")
         self.est_max_hr : int = self.estimate_max_hr()
+        self.email : str = email
     
     #estimating the maximum heart rate with standard formulas
     def estimate_max_hr(self) -> int:
@@ -53,6 +62,10 @@ class Subject(Person):
 
         age_delta = datetime.now() - datetime.strptime(self.__date_of_birth, '%Y.%m.%d')
         return int(age_delta.days / 365.25)
+    
+    def update_email(self, new_email : str, ip : str, port : int):
+        self.email = new_email
+        self.put(ip, port)
                  
 
 

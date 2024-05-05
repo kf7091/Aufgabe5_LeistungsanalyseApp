@@ -6,7 +6,8 @@ subject = mc.Subject(
     input("Geben Sie den Vornamen des Probande:in ein:"),
     input("Geben Sie den Nachnamen des Probande:in ein:"),
     input("Geben sie das Geschlecht 'male' oder 'female' an:"),
-    datetime.strptime(input("Geben Sie das Geburtsdatum des Probanden ein:"), '%d.%m.%Y')
+    datetime.strptime(input("Geben Sie das Geburtsdatum des Probanden ein:"), '%d.%m.%Y'),
+    input("Geben Sie die E-Mail-Adresse des Probanden ein:")
    )
 
 #create supervisor
@@ -23,4 +24,9 @@ experiment = mc.Experiment(
     subject.__dict__
 )
 
+server_ip = "localhost"
+server_port = 5000
+
 experiment.save()
+subject.put(server_ip, server_port)
+supervisor.put(server_ip, server_port)
